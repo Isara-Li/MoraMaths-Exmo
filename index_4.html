@@ -1,62 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <!--edit here-->
     <title>Colorful Spiral Art with Python Turtle</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1, h2, p, pre {
-            margin-bottom: 20px;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="./prism.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <script>/*<![CDATA[*/ /* Codebox Script by Fineshop Design */ function copyC(e,t){var o=document.getElementById(e),n=document.getElementById(t),e=getSelection(),t=document.createRange();e.removeAllRanges(),t.selectNodeContents(n),e.addRange(t),document.execCommand("copy"),e.removeAllRanges(),o.classList.add("copied"),document.getElementById("toastNotif").innerHTML="<span>Copied to Clipboard!</span>",setTimeout(()=>{o.classList.remove("copied")},3e3)} /*]]>*/</script>
+    <div id="content" class="content-wrapper">
+    <script src="./prism.js"></script>
     <h1>Colorful Spiral Art with Python Turtle</h1>
     <p>
         Welcome to this mesmerizing Python Turtle adventure! In this web page, we'll introduce you to a Python program that creates a captivating and colorful spiral art using the Turtle graphics library. The spiral will gracefully change colors, and you'll be amazed by the beautiful patterns that emerge on your screen!
     </p>
-    <h2>Python Code for Colorful Spiral Art</h2>
+    <h2 class="panel-sticky">Python Code for Colorful Spiral Art</h2>
     <p>
         Below is the Python code that generates the colorful spiral art. The code utilizes the Turtle graphics library, which is an excellent tool for creating interactive graphics and visualizations.
     </p>
-    <pre><code>
-from turtle import *
-from colorsys import *
+    <!--[ Code Box ]-->
+    <div class='cBox'>
+        <div class='cBoxH'>
+          <!--[ Heading ]-->
+          <span>Code --&gt; python</span>
+          <!--[ Copy Button ]-->
+          <button id='copy3' class='cBoxB' onclick="copyC('copy3','code3')">
+            <i class='icn'></i>
+          </button>
+        </div>
+        <!--[ python-code ]-->
+<div id='code3'>
+<pre class="line-numbers">
+<code class="language-python">from turtle import *
+    from colorsys import *
+    
+    bgcolor('black')
+    tracer(100)
+    pensize(4)
+    h = 0
+    
+    def draw(ang, n):
+        circle(5 + n, 69)
+        left(ang)
+        circle(5 + 2 * n, 60)
+    
+    goto(0, 0)
+    
+    for i in range(500):
+        c = hsv_to_rgb(h, 1, 1)
+        h += 0.005
+        color(c)
+        up()
+        draw(90, i)
+        draw(180, i)
+        down()
+        draw(1/2, i - i)
+        draw(180, i / 2)
+        draw(120, i - i)
+    
+</code>
+</pre>
+</div>
+      </div>
 
-bgcolor('black')
-tracer(100)
-pensize(4)
-h = 0
-
-def draw(ang, n):
-    circle(5 + n, 69)
-    left(ang)
-    circle(5 + 2 * n, 60)
-
-goto(0, 0)
-
-for i in range(500):
-    c = hsv_to_rgb(h, 1, 1)
-    h += 0.005
-    color(c)
-    up()
-    draw(90, i)
-    draw(180, i)
-    down()
-    draw(1/2, i - i)
-    draw(180, i / 2)
-    draw(120, i - i)
-    </code></pre>
-
-    <h2>How the Code Works</h2>
+    <h2 class="panel-sticky">How the Code Works</h2>
     <p>
         The Python code above uses the Turtle graphics library to create the colorful spiral. Let's briefly explain the key parts of the code:
     </p>
@@ -70,25 +79,39 @@ for i in range(500):
         <li><code>hsv_to_rgb(h, 1, 1)</code>: Converts the hue value to an RGB color, producing vibrant colors for the spiral.</li>
     </ul>
 
-    <h2>Running the Python Code</h2>
+    <h2 class="panel-sticky">Running the Python Code</h2>
     <p>
         To see the colorful spiral art in action, save the Python code to a file with a .py extension, such as colorful_spiral.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
     </p>
-    <pre><code>
-python colorful_spiral.py
-    </code></pre>
-
-    <h2>Behold the Colorful Spiral</h2>
+     <!--[ Code Box ]-->
+     <div class='cBox'>
+        <div class='cBoxH'>
+          <!--[ Heading ]-->
+          <span>Code --&gt; python</span>
+          <!--[ Copy Button ]-->
+          <button id='copy3' class='cBoxB' onclick="copyC('copy3','code3')">
+            <i class='icn'></i>
+          </button>
+        </div>
+        <!--[ python-code ]-->
+<div id='code3'>
+<pre class="line-numbers">
+<code class="language-python">python colorful_spiral.py
+</code>
+</pre>
+</div>
+      </div>
+    <h2 class="panel-sticky">Behold the Colorful Spiral</h2>
     <p>
         As you run the Python program, the Turtle graphics window will pop up and start drawing the colorful spiral. Watch in awe as the spiral emerges, swirling and changing hues as it progresses. The combination of colors and the gradual change of direction create an enchanting visual experience.
     </p>
 
-    <h2>Experiment and Customize</h2>
+    <h2 class="panel-sticky">Experiment and Customize</h2>
     <p>
         Feel free to experiment and customize the program! You can adjust the number of colors used in the spiral, the drawing speed, and the size and shape of the spiral. Change the values in the code and see how it affects the resulting spiral art!
     </p>
 
-    <h2>Conclusion</h2>
+    <h2 class="panel-sticky">Conclusion</h2>
     <p>
         With just a few lines of Python code and the power of Turtle graphics, you've created a captivating and colorful spiral art. It's a delightful way to explore the magic of colors and geometry while showcasing the creative potential of Python.
     </p>
