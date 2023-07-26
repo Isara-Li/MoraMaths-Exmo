@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--edit here-->
+    <title>Visualization of Sine and Cosine Functions with Python Turtle</title>
+    
+    <link rel="stylesheet" href="./prism.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <script>/*<![CDATA[*/ /* Codebox Script by Fineshop Design */ function copyC(e,t){var o=document.getElementById(e),n=document.getElementById(t),e=getSelection(),t=document.createRange();e.removeAllRanges(),t.selectNodeContents(n),e.addRange(t),document.execCommand("copy"),e.removeAllRanges(),o.classList.add("copied"),document.getElementById("toastNotif").innerHTML="<span>Copied to Clipboard!</span>",setTimeout(()=>{o.classList.remove("copied")},3e3)} /*]]>*/</script>
+    <div id="content" class="content-wrapper">
+    <script src="./prism.js"></script>
+    <h1>Visualization of Sine and Cosine Functions with Python Turtle</h1>
+    <p>
+        Welcome to this exciting Python Turtle visualization of Sine and Cosine functions! In this web page, we'll introduce you to a Python program that beautifully illustrates the Sine and Cosine functions using the Turtle graphics library. Watch as the sine and cosine curves gracefully oscillate on the screen!
+    </p>
+    <h2 class="panel-sticky">Python Code for Visualization</h2>
+    <p>
+        Below is the Python code that creates the visualization of the Sine and Cosine functions using the Turtle graphics library.
+    </p>
+    <!--[ Code Box ]-->
+    <div class='cBox'>
+        <div class='cBoxH'>
+          <!--[ Heading ]-->
+          <span>Code --&gt; python</span>
+          <!--[ Copy Button ]-->
+          <button id='copy3' class='cBoxB' onclick="copyC('copy3','code3')">
+            <i class='icn'></i>
+          </button>
+        </div>
+        <!--[ python-code ]-->
+<div id='code3'>
+<pre class="line-numbers">
+<code class="language-python">
+from turtle import *
+import math
+
+ht()
+bgcolor('black')
+penup()
+goto(0, 176)
+color('cyan')
+pendown()
+goto(0, -176)
+penup()
+goto(-225, 0)
+pendown()
+goto(225, 0)
+penup()
+
+goto(0, 95)
+pendown()
+write('-1',)
+penup()
+
+goto(0, -105)
+pendown()
+write('--1',)
+penup()
+
+for x in range(-175, 201):
+    goto(x, 100 * math.sin((x / 100) * 2 * math.pi))
+    pendown()
+goto(201, -2)
+pendown()
+write('y = sin(x)', font=('Arial', 20, 'bold'))
+penup()
+
+penup()
+color('lime')
+
+penup()
+goto(-175, 0)
+pendown()
+for x in range(-175, 201):
+    goto(x, 100 * math.cos((x / 100) * 2 * math.pi))
+    pendown()   
+goto(201, 95)
+pendown()
+write('y = cos(x)', font=('Arial', 20, 'bold'))
+penup()
+</code>
+</pre>
+</div>
+      </div>
+
+    <h2 class="panel-sticky">How the Code Works</h2>
+    <p>
+        The Python code above uses the Turtle graphics library to create the visualization of Sine and Cosine functions. Let's briefly explain the key parts of the code:
+    </p>
+    <ul>
+        <li><code>turtle.Screen()</code>: Creates a screen object for the Turtle graphics.</li>
+        <li><code>turtle.Turtle()</code>: Creates a Turtle object, which represents the drawing pen.</li>
+        <li><code>math.sin()</code> and <code>math.cos()</code>: Math functions to calculate the values of Sine and Cosine at different points.</li>
+        <li><code>for x in range(-175, 201):</code>: Loops through a range of x-values to draw the Sine and Cosine curves.</li>
+        <li><code>turtle.goto(x, 100 * math.sin((x / 100) * 2 * math.pi))</code>: Sets the turtle to the corresponding (x, y) point to draw the Sine curve.</li>
+        <li><code>turtle.goto(x, 100 * math.cos((x / 100) * 2 * math.pi))</code>: Sets the turtle to the corresponding (x, y) point to draw the Cosine curve.</li>
+    </ul>
+
+    <h2 class="panel-sticky">Running the Python Code</h2>
+    <p>
+        To witness the visualization of Sine and Cosine functions, save the Python code to a file with a .py extension, such as sine_cosine_visualization.py. Open a terminal or command prompt, navigate to the folder containing the file, and execute the following command:
+    </p>
+    <pre><code>
+python sine_cosine_visualization.py
+    </code></pre>
+
+    <h2 class="panel-sticky">Observe the Sine and Cosine Curves</h2>
+    <p>
+        As you run the Python program, a Turtle graphics window will pop up, showing the visualization of Sine and Cosine curves. Watch the curves gracefully oscillate as the Turtle moves across the screen, beautifully representing the periodic nature of Sine and Cosine functions.
+    </p>
+
+    <h2 class="panel-sticky">Conclusion</h2>
+    <p>
+        With Python Turtle and a touch of mathematics, you've created a stunning visualization of Sine and Cosine functions. It's a delightful way to explore the elegance of mathematical curves using Python.
+    </p>
+    <p>
+        Enjoy experimenting with different parameters and observing how the curves change. Have fun exploring the beauty of Sine and Cosine with Python!
+    </p>
+</body>
+</html>
+
