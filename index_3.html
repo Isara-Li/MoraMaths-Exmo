@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--edit here-->
+    <title>------//Isara_Liyanage//-------</title>
+    
+    <link rel="stylesheet" href="./prism.css">
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <section class="top-nav">
+    <div>
+      Logo Here
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <!--add links-->
+      <!--edit here-->
+      <li class="active"><a href="./spirals.html" >------//Isara_Liyanage//-------</a></li>
+      <!--add active class to current page-->
+    </ul>
+  </section>
+  
+
+  
+<body>
+    <script>/*<![CDATA[*/ /* Codebox Script by Fineshop Design */ function copyC(e,t){var o=document.getElementById(e),n=document.getElementById(t),e=getSelection(),t=document.createRange();e.removeAllRanges(),t.selectNodeContents(n),e.addRange(t),document.execCommand("copy"),e.removeAllRanges(),o.classList.add("copied"),document.getElementById("toastNotif").innerHTML="<span>Copied to Clipboard!</span>",setTimeout(()=>{o.classList.remove("copied")},3e3)} /*]]>*/</script>
+    <div id="content" class="content-wrapper">
+      
+
+    <script src="./prism.js"></script>
+    <!--edit here-->
+    <h1>------//Isara_Liyanage//-------</h1>
+    <!--[ Code Box ]-->
+      <div class='cBox'>
+        <div class='cBoxH'>
+          <!--[ Heading ]-->
+          <span>Code --&gt; python</span>
+          <!--[ Copy Button ]-->
+          <button id='copy3' class='cBoxB' onclick="copyC('copy3','code3')">
+            <i class='icn'></i>
+          </button>
+        </div>
+        <!--[ python-code ]-->
+<div id='code3'>
+<pre class="line-numbers">
+<code class="language-python">from turtle import *
+    import math
+    dot(70,"red")
+    up()
+    setposition(300,0)
+    down()
+    color("blue","blue")
+    shape("circle")
+    loop = True
+    xvel = 0
+    yvel = 1
+    while loop == True:
+        xvel +=  math.cos(math.radians(towards(0,0)))*(1000/(xcor()**2+ycor()**2))
+        yvel +=  math.sin(math.radians(towards(0,0)))*(1000/(xcor()**2+ycor()**2))
+        setposition(xcor()+xvel,ycor()+yvel)
+    
+  
+  
+</code>
+</pre>
+</div>
+      </div>
+      <div><p>This Python code uses the Turtle graphics library to simulate the motion of a blue circle being influenced by the gravitational attraction of a red dot at the center (0, 0) of the window.
+    </p></div>
+   <div>
+    <h2 class="panel-sticky">Here's a step-by-step explanation of the code:</h2>
+    <p>The code begins by importing the necessary modules: 'turtle' for graphics and 'colorsys' to work with colors in the HSV (Hue, Saturation, Value) color space. The background is set to black, and the turtle drawing speed is increased for smoother rendering.</p>
+   </div>
+   <ol>
+    <li>Import necessary modules: The code imports the `turtle` module, and all the functions are directly imported into the namespace, so you can use them without the `turtle.` prefix.
+    </li>
+    <li> Draw the red dot: The `dot()` function is used to draw a red dot with a diameter of 70 pixels at the center (0, 0) of the window.
+    </li>
+    <li> Set initial position and shape for the blue circle: The turtle's pen is lifted (`up()`), and the turtle is moved to the position (300, 0) without drawing (`setposition(300, 0)`). The pen is put down (`down()`), and the turtle's shape is set to a blue circle (`shape("circle")`).
+    </li>
+    <li> Initialize variables: The variables `loop`, `xvel`, and `yvel` are initialized. The variable `loop` is set to `True`, which will allow the animation loop to run indefinitely. The `xvel` and `yvel` variables represent the initial x and y components of the velocity of the blue circle, respectively.
+    </li>
+    <li>Animation loop: The code enters an infinite loop (`while loop == True`) to continuously update the position of the blue circle based on the gravitational attraction of the red dot.
+    </li>
+    <li>Update velocity components: In each iteration of the loop, the `xvel` and `yvel` variables are updated to simulate the gravitational attraction. The angle towards the red dot is calculated using the `towards(0, 0)` function, which returns the angle (in degrees) from the current turtle position to the point (0, 0) (the position of the red dot). The `math.cos()` and `math.sin()` functions are used to calculate the x and y components of the velocity, respectively. The velocity is inversely proportional to the distance from the red dot, with a scaling factor of 1000.
+    </li>
+    <li>Update position: The turtle's position is updated by adding the x and y components of the velocity to the current x and y coordinates using `setposition(xcor() + xvel, ycor() + yvel)`.
+    </li>
+   </ol>
+
+   <p>The blue circle will start at the position (300, 0) and be affected by the gravitational attraction of the red dot. The circle's path will be influenced by the gravitational pull, resulting in an animated motion as it moves closer to the red dot. The simulation will continue indefinitely due to the infinite loop.
+</p>
+</div>
+<!--closes menu-bar-->
+<script>
+  const content=document.getElementById("content")
+  content.addEventListener("click", uncheck);
+  function uncheck() {
+  let input = document.getElementById('menu-toggle');
+  input.checked = false;
+
+}
+</script>
+</body>
+</html>
