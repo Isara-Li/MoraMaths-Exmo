@@ -76,23 +76,23 @@
    <div>
     <h2 class="panel-sticky">Here's a step-by-step explanation of the code:</h2>
     <p>The code begins by importing the necessary modules: 'turtle' for graphics and 'colorsys' to work with colors in the HSV (Hue, Saturation, Value) color space. The background is set to black, and the turtle drawing speed is increased for smoother rendering.</p>
-
-   <ol>
-    <li>Import necessary modules: The code imports the `turtle` module, and all the functions are directly imported into the namespace, so you can use them without the `turtle.` prefix.
-    </li>
-    <li> Draw the red dot: The `dot()` function is used to draw a red dot with a diameter of 70 pixels at the center (0, 0) of the window.
-    </li>
-    <li> Set initial position and shape for the blue circle: The turtle's pen is lifted (`up()`), and the turtle is moved to the position (300, 0) without drawing (`setposition(300, 0)`). The pen is put down (`down()`), and the turtle's shape is set to a blue circle (`shape("circle")`).
-    </li>
-    <li> Initialize variables: The variables `loop`, `xvel`, and `yvel` are initialized. The variable `loop` is set to `True`, which will allow the animation loop to run indefinitely. The `xvel` and `yvel` variables represent the initial x and y components of the velocity of the blue circle, respectively.
-    </li>
-    <li>Animation loop: The code enters an infinite loop (`while loop == True`) to continuously update the position of the blue circle based on the gravitational attraction of the red dot.
-    </li>
-    <li>Update velocity components: In each iteration of the loop, the `xvel` and `yvel` variables are updated to simulate the gravitational attraction. The angle towards the red dot is calculated using the `towards(0, 0)` function, which returns the angle (in degrees) from the current turtle position to the point (0, 0) (the position of the red dot). The `math.cos()` and `math.sin()` functions are used to calculate the x and y components of the velocity, respectively. The velocity is inversely proportional to the distance from the red dot, with a scaling factor of 1000.
-    </li>
-    <li>Update position: The turtle's position is updated by adding the x and y components of the velocity to the current x and y coordinates using `setposition(xcor() + xvel, ycor() + yvel)`.
-    </li>
-   </ol> </div>
+   </div>
+   <div>
+    <p>Import necessary modules: The code imports the `turtle` module, and all the functions are directly imported into the namespace, so you can use them without the `turtle.` prefix.
+    </p>
+    <p> Draw the red dot: The `dot()` function is used to draw a red dot with a diameter of 70 pixels at the center (0, 0) of the window.
+    </p>
+    <p> Set initial position and shape for the blue circle: The turtle's pen is lifted (`up()`), and the turtle is moved to the position (300, 0) without drawing (`setposition(300, 0)`). The pen is put down (`down()`), and the turtle's shape is set to a blue circle (`shape("circle")`).
+    </p>
+    <p> Initialize variables: The variables `loop`, `xvel`, and `yvel` are initialized. The variable `loop` is set to `True`, which will allow the animation loop to run indefinitely. The `xvel` and `yvel` variables represent the initial x and y components of the velocity of the blue circle, respectively.
+    </p>
+    <p>Animation loop: The code enters an infinite loop (`while loop == True`) to continuously update the position of the blue circle based on the gravitational attraction of the red dot.
+    </p>
+    <p>Update velocity components: In each iteration of the loop, the `xvel` and `yvel` variables are updated to simulate the gravitational attraction. The angle towards the red dot is calculated using the `towards(0, 0)` function, which returns the angle (in degrees) from the current turtle position to the point (0, 0) (the position of the red dot). The `math.cos()` and `math.sin()` functions are used to calculate the x and y components of the velocity, respectively. The velocity is inversely proportional to the distance from the red dot, with a scaling factor of 1000.
+    </p>
+    <p>Update position: The turtle's position is updated by adding the x and y components of the velocity to the current x and y coordinates using `setposition(xcor() + xvel, ycor() + yvel)`.
+    </p>
+    </div>
 
    <p>The blue circle will start at the position (300, 0) and be affected by the gravitational attraction of the red dot. The circle's path will be influenced by the gravitational pull, resulting in an animated motion as it moves closer to the red dot. The simulation will continue indefinitely due to the infinite loop.
 </p>
